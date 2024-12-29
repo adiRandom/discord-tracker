@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Discord Online Checker",
+  "version": "1.0",
+  "description": "Checks online users on Discord and makes API calls.",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["https://discord.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
